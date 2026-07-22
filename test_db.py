@@ -16,4 +16,5 @@ docs = [
 db.add_documents(docs)
 results=db.search("How do I create REST API's?")
 
+print(results["ids"][0])
 print(results["documents"][0])
