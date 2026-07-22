@@ -1,4 +1,19 @@
-Java
-Python
-Docker
-REST API is used connect web service
+Python is a high-level programming language known for its simplicity and readability. It is widely used in web development, data science, machine learning, and automation.
+
+Machine learning is a branch of artificial intelligence that enables computers to learn from data without being explicitly programmed. It is used in recommendation systems, fraud detection, and image recognition.
+
+Artificial intelligence is the simulation of human intelligence in machines. AI includes machine learning, natural language processing, computer vision, and robotics.
+
+A vector database stores data as numerical vectors called embeddings. It allows semantic search by comparing the similarity between vectors instead of matching exact keywords.
+
+Retrieval-Augmented Generation (RAG) combines a language model with a retrieval system. The retriever finds relevant documents, and the language model generates answers using the retrieved context.
+
+Natural Language Processing (NLP) is a field of AI that enables computers to understand, interpret, and generate human language. Examples include chatbots, translation, and text summarization.
+
+Embeddings are dense numerical representations of text, images, or other data. Similar pieces of information have embeddings that are close together in vector space.
+
+Chunking is the process of splitting large documents into smaller pieces before generating embeddings. Overlapping chunks help preserve context between adjacent sections.
+
+Large Language Models (LLMs) are neural networks trained on massive datasets. They can answer questions, summarize text, generate code, and assist with many language tasks.
+
+Semantic search retrieves information based on meaning rather than exact keyword matching. It uses vector embeddings to identify the most relevant documents.

@@ -13,7 +13,7 @@ def chunk_by_word(text,chunk_size=5):
         chunks.append(words[i:i+chunk_size])
     return chunks
 
-def chunk_with_overlap(text,chunk_size=5,overlap=2):
+def chunk_with_overlap(text,chunk_size=10,overlap=2):
     words=text.split()
     chunks=[]
     start=0
@@ -21,6 +21,4 @@ def chunk_with_overlap(text,chunk_size=5,overlap=2):
         end=start+chunk_size
         chunks.append(" ".join(words[start:end]))
         start=end-overlap
-    pprint(chunks)
-
-chunk_with_overlap("Hello I am Bala and I done my engineering in Panimalar Engineering College")
+    return chunks
