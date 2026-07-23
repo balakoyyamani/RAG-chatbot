@@ -6,7 +6,17 @@ db=VectorDB()
 def ask(question):
     results=db.search(question)
 
-    context="\n\n".join(results["documents"][0])
+    # context="\n\n".join(results["documents"][0])
+
+    documents=results["documents"][0]
+    metadatas=results["metadatas"][0]
+    context=""
+    sources=[]
+
+    for doc,meta in zip(documents,metadatas):
+        context+=doc+"\n\n"
+        if meta["source"] not in sources:
+            sources.append(meta["source"])
 
     prompt = f"""
     You are a helpful AI assistant.
@@ -30,4 +40,7 @@ def ask(question):
         model=chat_model,
         contents=prompt
     )
-    return response.text
+    return {
+        "answer":response.text,
+        "sources":sources
+    }

@@ -22,11 +22,12 @@ def chat():
             "error": "Question is required."
         }), 400
 
-    answer = ask(question)
+    result = ask(question)
 
     return jsonify({
         "question": question,
-        "answer": answer
+        "answer": result["answer"],
+        "sources": result["sources"]
     })
 
 if __name__ == "__main__":

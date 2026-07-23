@@ -20,8 +20,8 @@ while True:
 
         continue
 
-    answer = ask(question)
+    result = ask(question)
 
-    print("\nAI :")
-
-    print(answer)
+    print(f"\nAI : {result["answer"]}")
+    for source in result["sources"]:
+        print(f"= {source}")

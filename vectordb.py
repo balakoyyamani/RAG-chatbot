@@ -11,6 +11,16 @@ class VectorDB:
             name="knowledge_base"
         )
 
+    def reset_collection(self):
+        try:
+            self.client.delete_collection(name="knowledge_base")
+            print("Database Deleted")
+        except:
+            print("collection doesnt exist. Creating new one.")
+
+        self.collections=self.client.create_collection(name="knowledge_base")
+        print("New collection is ready")
+
     def add_documents(self,documents,metadatas):
         vectors=get_embeddings(documents)
         ids=[str(uuid4()) for i in range(len(documents))]
