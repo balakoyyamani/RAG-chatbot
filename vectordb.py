@@ -11,13 +11,14 @@ class VectorDB:
             name="knowledge_base"
         )
 
-    def add_documents(self,documents):
+    def add_documents(self,documents,metadatas):
         vectors=get_embeddings(documents)
         ids=[str(uuid4()) for i in range(len(documents))]
         self.collections.add(
             ids=ids,
             documents=documents,
-            embeddings=vectors
+            embeddings=vectors,
+            metadatas=metadatas
         )
 
     def search(self,question,n=3):
