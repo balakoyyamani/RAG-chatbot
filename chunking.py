@@ -13,7 +13,7 @@ def chunk_by_word(text,chunk_size=5):
         chunks.append(words[i:i+chunk_size])
     return chunks
 
-def chunk_with_overlap(text,chunk_size=10,overlap=2):
+def chunk_with_overlap(text,chunk_size=1000,overlap=80):
     words=text.split()
     chunks=[]
     start=0
