@@ -24,4 +24,4 @@ while True:
 
     print(f"\nAI : {result["answer"]}")
     for source in result["sources"]:
-        print(f"= {source}")
+        print(f" - {source["file"]} (page {source["page"]})")

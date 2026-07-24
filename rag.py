@@ -15,8 +15,12 @@ def ask(question):
 
     for doc,meta in zip(documents,metadatas):
         context+=doc+"\n\n"
-        if meta["source"] not in sources:
-            sources.append(meta["source"])
+        source={
+            "file":meta["source"],
+            "page":meta["page"]
+        }
+        if source not in sources:
+            sources.append(source)
 
     prompt = f"""
     You are a helpful AI assistant.
